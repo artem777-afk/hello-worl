@@ -1,10 +1,14 @@
 function func() {
-    var sum = 0;
-    console.log($(".num"));
-    $(".num").each(function() {
-            sum += Number(this.value);
-        })
-        // sum = Number($(".num").val()) + Number($(".num").val()) + Number($(".num").val());
-        // console.log(sum);
-    $('#result').append(sum);
+    var res = 0;
+    var a = 10;
+    var f = 0;
+    var e = Number($("#a").val());
+    console.log(e);
+    while (e > 0) {
+        f = e % a;
+        res += f;
+        e = Math.round(e / a);
+    }
+
+    $('#result').append(res);
 }
