@@ -1,5 +1,10 @@
 function func() {
     var sum = 0;
-    sum = Number($("#a").val()) + Number($("#b").val()) + Number($("#c").val());
-    $('#d').val(sum);
+    console.log($(".num"));
+    $(".num").each(function() {
+            sum += Number(this.value);
+        })
+        // sum = Number($(".num").val()) + Number($(".num").val()) + Number($(".num").val());
+        // console.log(sum);
+    $('#result').append(sum);
 }
